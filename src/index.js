@@ -16,22 +16,3 @@ connectDB()
 .catch((err) =>{
     console.log("MONGO DB connection failed !!!", err);
 })
-
-
-
-
-
-
-/*
-import express from "express"
-const app = express()
-(async() =>{
-    try {
-       await mongoose.connect('${process.env.MONGODB_URL}/${DB_NAME}')
-
-    } catch (error) {
-        console.error("ERROR: " , error)
-        throw err
-    }
-})()
-*/
