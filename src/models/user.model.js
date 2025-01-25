@@ -67,7 +67,7 @@ userSchema.methods.generateAccessToken = function () {
             username: this.username,
             fullName: this.fullName,
         },
-         "1",
+         "2",
         {
             expiresIn: "1d",
         }
@@ -79,9 +79,9 @@ userSchema.methods.generateRefreshToken = function () {
         {
             _id: this._id,
         },
-            "1",
+            "2",
         {
-            expiresIn: "10",
+            expiresIn: "10d",
         }
     );
 };

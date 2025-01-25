@@ -184,7 +184,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     try {
         const decodedToken = jwt.verify(
             incomingRefreshToken,
-            "1"
+            "2"
         )
     
         const user = await User.findById(decodedToken?._id)
@@ -217,22 +217,21 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
             )
         )
     } catch (error) {
-        throw new ApiError(401, error?.message || "Invalid refresh token")
+        throw new ApiError(401, error?.message || "you")
     }
 
+    
+
+
+
+
+
+
 })
-
-
-
-    
-    
- 
-
-
-
 export {
     registerUser,
     loginUser,
     logoutUser,
-    refreshAccessToken
+    refreshAccessToken,
+    changeCurrentPassword
 }
